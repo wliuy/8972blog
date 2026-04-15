@@ -1,38 +1,39 @@
+---
+title: "关于我 / About Me"
+description: "寂静如雪 - 专注技术探索与资源分享"
+---
+
 # 关于我 / About Me
 
-你好！我是 **夏叶** ，一个在数字世界中默默无闻的一片叶子。
+你好！我是 **寂静如雪**。
+
+我是一个热衷于 **技术探索** 与 **资源分享** 的折腾控。对我而言，折腾技术是一种乐趣，而将实战经验与优质资源沉淀并分享出来，则是一种生活方式。
 
 ## 🛠️ 关于本站
 
-这个网站使用 **Astro** 框架构建，采用了 [Firefly](https://github.com/CuteLeaf/Firefly) 模板，Firefly 是基于 [Fuwari](https://github.com/saicaca/fuwari) 的二次开发。
+这里是我的数字花园，主要记录我在技术之路上的探索：
+- **自建服务**: 专注 Docker 容器化应用、VPS 性能优化以及各类 Self-hosted 服务的搭建心得。
+- **技术分享**: 包含系统底层调优、自动化脚本编写，以及各种硬核技术教程。
+- **资源同步**: 筛选并分享真正有价值的数字工具与技术资源。
+- **数字导航**: 实时维护我的常用技术工具链。
 
-**Firefly** 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+## 🚀 创作矩阵
+
+目前我在以下平台同步我的技术笔记与资源分享：
 
 
-**🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
-
-**🏠我的博客： [https://blog.cuteleaf.cn](https://blog.cuteleaf.cn/)**
-
-**📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
-
-**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
-
-**⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
-
-::github{repo="CuteLeaf/Firefly"}
-
-::github{repo="saicaca/fuwari"}
-
+- 📕 **小红书**: [寂静如雪](https://xhslink.com/m/8NjnfXOIqve)
+- 📺 **Bilibili**: [链接待更新]
+- 🎵 **抖音**: [链接待更新]
+- 🎥 **YouTube**: [链接待更新]
 
 ## 📫 联系方式
 
-如果你想和我交流技术问题，分享有趣的想法，或者只是想打个招呼，欢迎通过以下方式联系我：
+如果你也喜欢钻研技术，或者有优质资源想要交流，欢迎联系：
 
-- 💻 **GitHub**: [CuteLeaf](https://github.com/CuteLeaf)
-- ✉️ **Email**: [xiaye@msn.com](mailto:xiaye@msn.com)
-- 🐧 **QQ交流群：[1087127207](https://qm.qq.com/q/ZGsFa8qX2G)**
+- ✉️ **Email**: [请填入你的常用邮箱]
+- 💬 **交流**: 欢迎通过社交平台私信或 GitHub 提交 Issue。
 
 ---
 
-*感谢你的来访！希望在这里能找到对你有用的内容！*
-
+*感谢你的来访！保持寂静，如雪般沉淀。*
