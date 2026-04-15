@@ -7,7 +7,7 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "8972",
+	title: "寂静如雪",
 
 	// 站点副标题
 	subtitle: "技术与资源分享",
