@@ -21,19 +21,9 @@ description: "寂静如雪 - 专注技术探索与资源分享"
 
 目前我在以下平台同步我的技术笔记与资源分享：
 
-
-- 📕 **小红书**: [寂静如雪](https://xhslink.com/m/8NjnfXOIqve)
-- 📺 **Bilibili**: [链接待更新]
-- 🎵 **抖音**: [链接待更新]
-- 🎥 **YouTube**: [链接待更新]
-
-## 📫 联系方式
-
-如果你也喜欢钻研技术，或者有优质资源想要交流，欢迎联系：
-
-- ✉️ **Email**: [请填入你的常用邮箱]
-- 💬 **交流**: 欢迎通过社交平台私信或 GitHub 提交 Issue。
-
----
+* 📺 [**Bilibili**](https://space.bilibili.com/161365760)
+* 📕 [**小红书**](https://xhslink.com/m/8NjnfXOIqve)
+* 🎵 [**抖音**](https://v.douyin.com/zbT67CNeNW0/)
+* ▶️ [**YouTube**](https://www.youtube.com/@AooHu)
 
 *感谢你的来访！保持寂静，如雪般沉淀。*

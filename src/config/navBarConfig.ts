@@ -58,24 +58,30 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
         // 子菜单配置
         children: [
-            {
-                name: "8972资源站",
-                url: "https://89729981.xyz/",
-                external: true,
-                icon: "material-symbols:folder-zip-outline",
-            },
-            {
-                name: "8972导航",
-                url: "https://dh.89729981.xyz/",
-                external: true,
-                icon: "material-symbols:explore-outline",
-            },
-            {
-                name: "小红书",
-                url: "https://xhslink.com/m/8NjnfXOIqve",
-                external: true,
-                icon: "simple-icons:xiaohongshu",
-            },
+        {
+			name: "BiliBili",
+			url: "https://space.bilibili.com/161365760",
+            external: true,
+			icon: "simple-icons:bilibili",
+		},
+		{
+			name: "小红书",
+			url: "https://xhslink.com/m/8NjnfXOIqve",
+            external: true,
+			icon: "simple-icons:xiaohongshu",
+		},
+		{
+			name: "抖音",
+			url: "https://v.douyin.com/zbT67CNeNW0/",
+            external: true,
+			icon: "fa7-brands:tiktok",
+		},
+		{
+			name: "YouTube",
+			url: "https://www.youtube.com/@AooHu",
+            external: true,
+			icon: "fa7-brands:youtube",
+		},
         ],
     });
 
