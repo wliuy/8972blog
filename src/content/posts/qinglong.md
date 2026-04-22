@@ -1,8 +1,8 @@
 ---
 title: 青龙面板 (Qinglong) 部署全攻略：Docker 安装、依赖配置及拉库指南
-published: 2026-03-18
+published: 2026-04-20
 description: '手把手教你如何通过 Docker 部署青龙面板，并配置完善的 NodeJs、Python3 及 Linux 环境依赖，助力自动化脚本运行。'
-image: 'https://api.dujin.org/bing/1920.php'
+image: 'https://tc.yang.pp.ua/file/Blog/qinglong.png'
 tags: [青龙面板, Docker, 自托管, 自动化]
 category: 技术教程
 draft: false
