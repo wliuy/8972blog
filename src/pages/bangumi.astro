@@ -1,12 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
-import BangumiSection from "@/components/pages/bangumi/BangumiSection.astro";
-import TabNav from "@/components/pages/bangumi/TabNav.astro";
 import { siteConfig } from "@/config";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
 import { formatDateI18nWithTime } from "@/utils/date-utils";
+import Card from "@/components/pages/bangumi/Card.astro";
 
 // 🌟 引入你的本地项目数据
 import { myProjects } from "./projectData";
@@ -14,91 +13,102 @@ import { myProjects } from "./projectData";
 // 获取构建时间
 const buildTime = formatDateI18nWithTime(new Date());
 
-// 分类映射 (保持与 zh_CN.ts 一致)
-const categoryMap = {
-	book: { id: "book", name: i18n(I18nKey.bangumiCategoryBook), subjectType: 1 },
-	anime: { id: "anime", name: i18n(I18nKey.bangumiCategoryAnime), subjectType: 2 },
-	music: { id: "music", name: i18n(I18nKey.bangumiCategoryMusic), subjectType: 3 },
-	game: { id: "game", name: i18n(I18nKey.bangumiCategoryGame), subjectType: 4 },
-	real: { id: "real", name: i18n(I18nKey.bangumiCategoryReal), subjectType: 6 },
-};
-
-// --- 数据处理：将本地数据按分类分发到对应的 Tab ---
-const bangumiData: Record<string, any[]> = {};
-const tabs: Array<{ id: string; name: string; count: number }> = [];
-
-// 遍历分类映射，从本地数据中过滤出对应项
-for (const [key, info] of Object.entries(categoryMap)) {
-    // 过滤出属于该分类的项目
-    const categoryProjects = myProjects.filter(p => p.subject.type === info.subjectType);
-    
-    // 只有当该分类下有项目时，才显示该 Tab（你也可以去掉这个判断，显示空分类）
-    if (categoryProjects.length > 0) {
-        bangumiData[key] = categoryProjects;
-        tabs.push({
-            id: key,
-            name: info.name,
-            count: categoryProjects.length
-        });
-    }
-}
-
-// 默认激活第一个有数据的 Tab
-const activeTab = tabs[0]?.id || "anime";
+// 定义分类过滤项，按你要求的顺序排列
+// key 0:全部, 3:资源站, 4:实用工具, 6:在线编辑
+const subjectTypeFilters = [
+  { key: 0, label: i18n(I18nKey.bangumiFilterAll) },      
+  { key: 3, label: i18n(I18nKey.bangumiCategoryMusic) },  
+  { key: 4, label: i18n(I18nKey.bangumiCategoryGame) },   
+  { key: 6, label: i18n(I18nKey.bangumiCategoryReal) },   
+];
 ---
 
 <MainGridLayout title={i18n(I18nKey.bangumi)} description={i18n(I18nKey.bangumiSubtitle)}>
   <div class="flex w-full rounded-(--radius-large) overflow-hidden relative min-h-32">
     <div class="card-base z-10 px-9 py-6 relative w-full">
-        <div class="relative w-full mb-8">
-            <div class="mb-6">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="h-8 w-8 rounded-lg bg-(--primary) flex items-center justify-center text-white dark:text-black/70">
-                        <Icon name="material-symbols:terminal" class="text-[1.5rem]"></Icon>
-                    </div>
-                    <div class="text-3xl font-bold text-neutral-900 dark:text-neutral-100">
-                        {i18n(I18nKey.bangumi)}
-                    </div>
+        
+        <div class="relative w-full mb-8 onload-animation">
+            <div class="flex items-center gap-3 mb-3">
+                <div class="h-8 w-8 rounded-lg bg-(--primary) flex items-center justify-center text-white dark:text-black/70">
+                    <Icon name="material-symbols:terminal" class="text-[1.5rem]"></Icon>
                 </div>
-                <p class="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                    {i18n(I18nKey.bangumiSubtitle)}
-                </p>
-                <p class="text-xs text-neutral-500 dark:text-neutral-500 mt-2">
-                    {i18n(I18nKey.bangumiLastUpdated)} {buildTime} | {i18n(I18nKey.bangumiDataStatic)}
-                </p>
+                <div class="text-3xl font-bold text-neutral-900 dark:text-neutral-100">
+                    {i18n(I18nKey.bangumi)}
+                </div>
             </div>
-
-      {tabs.length > 0 ? (
-        <>
-          <TabNav tabs={tabs} activeTab={activeTab} />
-
-          {tabs.map((tab) => (
-            <BangumiSection
-              sectionId={tab.id}
-              items={bangumiData[tab.id] || []}
-              isActive={tab.id === activeTab}
-              itemsPerPage={12}
-            />
-          ))}
-        </>
-      ) : (
-        <div class="text-center py-16">
-          <div class="inline-flex items-center justify-center w-16 h-16 bg-(--btn-regular-bg) rounded-full mb-6 border border-(--line-divider)">
-            <Icon name="material-symbols:category-outline" class="text-[2rem] text-(--btn-content)" />
-          </div>
-          <h2 class="text-xl font-semibold text-black/80 dark:text-white/80 mb-3">
-            {i18n(I18nKey.bangumiNoData)}
-          </h2>
-          <p class="text-black/60 dark:text-white/60 mb-4 max-w-md mx-auto">
-            {i18n(I18nKey.bangumiNoDataDescription)}
-          </p>
+            <p class="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                {i18n(I18nKey.bangumiSubtitle)}
+            </p>
+            <p class="text-xs text-neutral-500 dark:text-neutral-500 mt-2">
+                {i18n(I18nKey.bangumiLastUpdated)} {buildTime} | {i18n(I18nKey.bangumiDataStatic)}
+            </p>
         </div>
-      )}
+
+        <div class="flex flex-wrap gap-2 mb-10 onload-animation" style="animation-delay: 100ms">
+          {
+            subjectTypeFilters.map((type) => (
+              <button
+                data-type={type.key}
+                class="filter-btn px-4 py-1.5 rounded-xl border border-(--line-divider) bg-(--card-bg) text-sm font-medium transition-all hover:border-(--primary) hover:text-(--primary) [&.active]:bg-(--primary) [&.active]:text-white [&.active]:border-(--primary)"
+              >
+                {type.label}
+              </button>
+            ))
+          }
+        </div>
+
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 onload-animation" style="animation-delay: 200ms">
+          {
+            myProjects.map((item) => (
+              <div class="project-item block" data-category={item.subject.type}>
+                <Card item={item} loadImage={true} />
+              </div>
+            ))
+          }
+        </div>
+
+        {myProjects.length === 0 && (
+          <div class="text-center py-16">
+            <h2 class="text-xl font-semibold text-black/80 dark:text-white/80">
+              {i18n(I18nKey.bangumiNoData)}
+            </h2>
+          </div>
+        )}
     </div>
   </div>
 </MainGridLayout>
 
+<script>
+  // 客户端实时过滤脚本
+  const buttons = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.project-item');
+
+  // 初始化：默认高亮“全部”
+  document.querySelector('[data-type="0"]')?.classList.add('active');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedType = button.getAttribute('data-type');
+
+      // 切换按钮样式
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // 过滤显示
+      items.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (selectedType === '0' || itemCategory === selectedType) {
+          (item as HTMLElement).style.display = 'block';
+        } else {
+          (item as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
 <style>
+  /* 保持描述文字的简洁 */
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;

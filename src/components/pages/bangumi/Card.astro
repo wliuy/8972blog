@@ -1,6 +1,4 @@
 ---
-import I18nKey from "@/i18n/i18nKey";
-import { i18n } from "@/i18n/translation";
 import type { UserSubjectCollection } from "@/types/bangumi";
 
 interface Props {
@@ -9,79 +7,50 @@ interface Props {
 }
 
 const { item, loadImage = false } = Astro.props;
+const { subject } = item;
 
-// 1. 核心修复：直接获取你在 projectData.ts 里填写的 url
-// 如果没有填写 url，则回退到原来的 ID 逻辑
-const finalUrl = item.subject.url || `https://bgm.tv/subject/${item.subject.id}`;
-
-// 2. 状态文字转换
-const getStatusText = (type: number) => {
-	switch (type) {
-		case 2:
-			return "已发布";
-		case 3:
-			return "维护中";
-		default:
-			return "进行中";
-	}
-};
-
-// 3. 状态颜色转换
-const getStatusColor = (type: number) => {
-	switch (type) {
-		case 2:
-			return "bg-green-500/10 text-green-600 dark:text-green-400";
-		case 3:
-			return "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400";
-		default:
-			return "bg-blue-500/10 text-blue-600 dark:text-blue-400";
-	}
-};
+// 核心修复：直接跳转到数据中定义的 url，点击卡片直接打开工具
+const finalUrl = subject.url || `https://bgm.tv/subject/${subject.id}`;
 ---
 
 <a
   href={finalUrl}
   target="_blank"
   rel="noopener noreferrer nofollow"
-  class="group flex items-center gap-4 p-3 rounded-xl border border-(--line-divider) bg-(--card-bg) transition-all duration-300 hover:shadow-md hover:border-(--primary) hover:scale-[1.01] block"
+  class="group flex items-center gap-4 p-3 rounded-xl border border-(--line-divider) bg-(--card-bg) transition-all duration-300 hover:shadow-md hover:border-(--primary) hover:scale-[1.01] block overflow-hidden"
 >
-  <div class="w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-    {item.subject?.images?.medium ? (
+  <div class="w-14 h-14 shrink-0 rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
+    {subject.images?.medium ? (
       <img
-        src={loadImage ? item.subject.images.medium : undefined}
-        data-src={loadImage ? undefined : item.subject.images.medium}
-        alt={item.subject.name_cn || item.subject.name}
+        src={loadImage ? subject.images.medium : undefined}
+        data-src={loadImage ? undefined : subject.images.medium}
+        alt={subject.name_cn || subject.name}
         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         loading="lazy"
         decoding="async"
       />
     ) : (
-      <div class="w-full h-full flex items-center justify-center text-2xl">
-        🚀
-      </div>
+      <div class="text-2xl">🚀</div>
     )}
   </div>
 
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2">
-      <h3 class="font-bold text-sm text-neutral-900 dark:text-neutral-100 truncate group-hover:text-(--primary) transition-colors">
-        {item.subject.name_cn || item.subject.name}
+    <div class="flex items-center">
+      <h3 class="font-bold text-base text-neutral-900 dark:text-neutral-100 truncate group-hover:text-(--primary) transition-colors">
+        {subject.name_cn || subject.name}
       </h3>
-      <span class={`text-[10px] px-1.5 py-0.5 rounded-md font-medium whitespace-nowrap ${getStatusColor(item.type)}`}>
-        {getStatusText(item.type)}
-      </span>
     </div>
 
-    {item.subject.short_summary && (
-      <p class="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-2 mt-1 leading-relaxed">
-        {item.subject.short_summary}
+    {subject.short_summary && (
+      <p class="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-1 mt-0.5 opacity-80">
+        {subject.short_summary}
       </p>
     )}
 
-    {item.subject.type && (
+    {subject.type && (
       <div class="flex gap-1 mt-1.5">
-        <span class="text-[9px] px-1.5 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-400 uppercase tracking-wider">
-          {item.subject.type === 3 ? "资源站" : item.subject.type === 4 ? "实用工具" : "项目"}
+        <span class="text-[9px] px-1.5 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-400 font-medium uppercase tracking-wider">
+          {subject.type === 3 ? "资源站" : subject.type === 4 ? "实用工具" : subject.type === 6 ? "在线编辑" : "项目"}
         </span>
       </div>
     )}

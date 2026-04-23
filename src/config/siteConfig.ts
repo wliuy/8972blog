@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
 
 	// 站点描述
 	description:
-		"8972 的个人技术博客。专注于优质资源分享、自托管服务指南以及各种技术方案的探索记录，致力于打造一个纯粹的技术沉淀空间。",
+		"寂静如雪 的个人技术博客。专注于优质资源分享、自托管服务指南以及各种技术方案的探索记录，致力于打造一个纯粹的技术沉淀空间。",
 
 	// 站点关键词
 	keywords: [
@@ -146,7 +146,7 @@ export const siteConfig: SiteConfig = {
 	// 文章列表布局配置
 	postListLayout: {
 		// 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（多列布局）
-		defaultMode: "list",
+		defaultMode: "grid",
 		// 是否允许用户切换布局
 		allowSwitch: true,
 		// 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效

@@ -2,31 +2,32 @@
 
 export const myProjects = [
   {
-    subject: {
-      name_cn: "8972 资源站",
-      images: { large: "https://pic.imgdb.cn/item/661d1e1c0ea9cb163f4a3e1b.png" },
-      type: 3, // 对应翻译中的：资源站
-      short_summary: "寂静如雪旗下的综合资源共享平台，整合优质技术与软件。",
-      url: "https://89729981.xyz/"
+subject: {
+name_cn: "云享资源站",
+      // 这里是你刚才发给我的云朵图标
+      images: { medium: "data:image/svg+xml;utf8,<svg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='256' height='256'><path d='M597.76 426.666667m-256 0a256 256 0 1 0 512 0 256 256 0 1 0-512 0Z' fill='%23FFE97C'></path><path d='M960.426667 405.333333a21.333333 21.333333 0 0 1 0 42.666667h-42.666667a21.333333 21.333333 0 0 1 0-42.666667h42.666667z m-91.136-220.032a21.333333 21.333333 0 0 0-30.165334-30.165333l-30.165333 30.165333a21.333333 21.333333 0 0 0 30.165333 30.165334l30.165334-30.165334zM356.394667 155.136a21.333333 21.333333 0 0 0-30.165334 30.165333l30.165334 30.165334a21.333333 21.333333 0 0 0 30.208-30.165334l-30.208-30.165333zM619.093333 64a21.333333 21.333333 0 0 0-42.666666 0v42.666667a21.333333 21.333333 0 0 0 42.666666 0v-42.666667z' fill='%23FFB28E'></path><path d='M254.506667 521.642667A231.338667 231.338667 0 0 1 480 341.333333a231.253333 231.253333 0 0 1 230.912 240.426667 160.042667 160.042667 0 1 1 106.88 291.925333v0.981334h-533.333333A177.877333 177.877333 0 0 1 106.666667 696.874667a177.92 177.92 0 0 1 147.84-175.232z' fill='%23D2ECFF'></path><path d='M174.762667 554.197333c24.021333 9.813333-0.512 82.176-35.968 133.546667-19.157333 27.776-37.205333 19.669333-30.805334-21.930667 6.4-41.642667 43.861333-120.96 66.773334-111.616z' fill='%238ECDFF'></path></svg>" },
+      type: 3, 
+      short_summary: "站长的分享汇总，包含 24T 影视和各种破解软件。",
+      url: "https://89729981.xyz"
     },
-    type: 2, // 对应状态：已发布
+    type: 2,
   },
   {
     subject: {
-      name_cn: "在线封面制作",
-      images: { large: "https://pic.imgdb.cn/item/661d1e1c0ea9cb163f4a3e1b.png" },
-      type: 4, // 对应翻译中的：实用工具
-      short_summary: "专为博主设计的封面生成器，一键生成精美头图。",
+      name_cn: "封面制作工具",
+      images: { medium: "https://tc.yang.pp.ua/file/logo/cover.png" },
+      type: 4, 
+      short_summary: "一个免费、漂亮的封面生成器。",
       url: "https://cover.89729981.xyz/"
     },
     type: 2,
   },
   {
     subject: {
-      name_cn: "GitHub/Docker 加速",
-      images: { large: "https://pic.imgdb.cn/item/661d1e1c0ea9cb163f4a3e1b.png" },
+      name_cn: "加速服务",
+      images: { medium: "data:image/svg+xml;utf8,<svg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'><path d='M465.981 1001.74a89.578 89.578 0 0 1-89.889-88.955l-0.356-63.666c-176.662 38.422-213.927-74.93-213.927-74.93-28.895-73.372-70.523-92.873-70.523-92.873-57.61-39.446 4.364-38.645 4.364-38.645 63.71 4.452 97.28 65.447 97.28 65.447 56.631 97.058 148.569 69.009 184.765 52.803 5.699-41.049 22.172-69.053 40.337-84.947-141.045-16.028-289.303-70.523-289.303-313.79 0-69.32 24.799-125.952 65.447-170.429-6.589-16.028-28.316-80.584 6.144-168.025 0 0 53.337-17.052 174.659 65.09a609.28 609.28 0 0 1 158.943-21.37c53.915 0.223 108.276 7.257 159.031 21.37C814.186 6.679 867.434 23.73 867.434 23.73c34.549 87.485 12.822 152.042 6.233 168.025 40.693 44.433 65.358 101.109 65.358 170.43 0 243.89-148.57 297.583-289.926 313.299 22.751 19.723 43.053 58.323 43.053 117.582 0 84.992-0.312 119.674-0.312 119.674a89.622 89.622 0 0 1-89.8 89H465.98z' fill='%2346B980'></path></svg>" },
       type: 4, 
-      short_summary: "提供稳定的 GitHub 仓库与 Docker 镜像代理加速服务。",
+      short_summary: "GitHub、Docker 镜像加速服务。",
       url: "https://su.ayang.nyc.mn/"
     },
     type: 2,
@@ -34,9 +35,9 @@ export const myProjects = [
   {
     subject: {
       name_cn: "工具坊",
-      images: { large: "https://pic.imgdb.cn/item/661d1e1c0ea9cb163f4a3e1b.png" },
+      images: { medium: "https://www.faviconextractor.com/favicon/tools.89729981.xyz" },
       type: 4, 
-      short_summary: "集合了各种日常开发、办公的小工具集合，提高工作效率。",
+      short_summary: "集成多种常用在线工具，即开即用。",
       url: "https://tools.89729981.xyz/"
     },
     type: 2,
@@ -44,20 +45,30 @@ export const myProjects = [
   {
     subject: {
       name_cn: "PDF 在线编辑",
-      images: { large: "https://pic.imgdb.cn/item/661d1e1c0ea9cb163f4a3e1b.png" },
-      type: 6, // 对应翻译中的：在线编辑
-      short_summary: "纯前端实现的 PDF 编辑器，无需上传，安全保护隐私。",
+      images: { medium: "https://www.faviconextractor.com/favicon/pdfcraft.ayang.cc.cd" },
+      type: 6, 
+      short_summary: "近百种 PDF 处理功能，轻量办公神器。",
       url: "https://pdfcraft.ayang.cc.cd/"
     },
     type: 2,
   },
   {
     subject: {
-      name_cn: "思维导图",
-      images: { large: "https://pic.imgdb.cn/item/661d1e1c0ea9cb163f4a3e1b.png" },
+      name_cn: "Flash 模拟器",
+      images: { medium: "data:image/svg+xml;utf8,<svg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='256' height='256'><path d='M145.6 0C100.8 0 64 36.8 64 81.6v860.8C64 987.2 100.8 1024 145.6 1024h732.8c44.8 0 81.6-36.8 81.6-81.6V324.8L657.6 0h-512z' fill='%23E53C3C'></path><path d='M657.6 0v233.6c0 25.6 17.6 91.2 97.6 91.2H960L657.6 0z' fill='%23FFFFFF'></path><path d='M344 689.6h-94.4V752h91.2c6.4 0 11.2 4.8 11.2 11.2 0 4.8-4.8 9.6-11.2 9.6h-91.2v78.4c0 6.4-4.8 11.2-11.2 11.2-6.4 0-12.8-4.8-12.8-11.2V686.4c0-9.6 8-17.6 17.6-17.6h100.8c4.8 0 9.6 4.8 9.6 11.2 0 4.8-4.8 9.6-9.6 9.6z' fill='%23FFFFFF'></path></svg>" },
       type: 4, 
-      short_summary: "轻量化的在线思维导图绘制工具，支持多种格式导出。",
-      url: "https://drawnix.89729981.xyz/"
+      short_summary: "在线模拟 Flash 环境，畅玩小游戏。",
+      url: "https://flash.yang.pp.ua/"
+    },
+    type: 2,
+  },
+  {
+    subject: {
+      name_cn: "阿胡起义",
+      images: { medium: "https://tc.yang.pp.ua/file/logo/1757732783364_ahoo.png" },
+      type: 4, 
+      short_summary: "一款魔性、好玩的网页小游戏。",
+      url: "https://ahoo.yang.pp.ua/"
     },
     type: 2,
   }
