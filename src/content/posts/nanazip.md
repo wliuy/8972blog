@@ -11,6 +11,8 @@ draft: false
 
 如果你追求极致的性能与操作效率，**NanaZip** 就是 Windows 上解压软件的终点站。
 
+> 视频介绍：https://www.bilibili.com/video/BV1ZZo4B2E3K/
+
 ## 🚀 核心四大亮点
 
 ### 1. 顶级的压缩性能
