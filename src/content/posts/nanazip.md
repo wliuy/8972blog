@@ -4,7 +4,7 @@ published: 2026-04-22
 description: '继承 7-Zip 强悍内核，拥有顶级的压缩比、速度，以及超方便的 Hash 校验功能。'
 image: 'https://tc.yang.pp.ua/file/Blog/nanazip.png'
 tags: [Windows, NanaZip, 效率工具]
-category: 软件推荐
+category: 电脑软件
 sticky: false
 draft: false
 ---
