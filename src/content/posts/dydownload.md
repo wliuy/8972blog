@@ -2,7 +2,7 @@
 title: 强力“收割”！抖音全能下载器 视频列表批量下载
 published: 2026-05-03
 description: 采用原生 Rust 架构，主打极致的下载“收割”体验。
-image: https://tc.yang.pp.ua/file/Blog/dy2.png
+image: https://tc.yang.pp.ua/file/Blog/dy2(1).png
 tags: [视频下载, 工具推荐, 效率]
 category: 电脑软件
 ---
